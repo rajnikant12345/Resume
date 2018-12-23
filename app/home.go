@@ -77,7 +77,8 @@ func CreateSkills()*engine.Element {
 	<div class="f5 dark-gray fw2 tracked">
 	<ul >
   		<li>C++/C, Golang ( GO )</li>
-  		<li>Microservices, Docker, Docker Compose , Distributed Systems</li>
+		<li>Microservices, Docker, Docker Compose , Distributed Systems</li>
+  		<li>Key Management Solutions</li>
   		<li>Information Security and Data Protection</li>
 		<li>Crypto Algorithms (RSA, AES, ECC), PKI, Secure Applications</li>
   		<li>Microsoft Crypto Service Providers , Microsoft Crypto Next Generation Providers, OpenSSL Engines</li>
