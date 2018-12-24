@@ -22,10 +22,10 @@ func CreateHome()*engine.Element {
     <div class="f5 dark-gray fw2 tracked">
 		<ul >
 			<li>
-  			<a class="f5 fw7 dib no-underline bg-animate bg-white hover-bg-light-blue dark-gray" href="https://github.com/gfto/toybox/blob/master/toys/pending/dhcp6.c">Contributed DHCP6 client for toybox</a>
+  			<a class="f5 fw7 dib no-underline bg-animate bg-white hover-bg-light-blue dark-gray" href="https://github.com/gfto/toybox/blob/master/toys/pending/dhcp6.c" target="_blank">Contributed DHCP6 client for toybox</a>
 			</li>
 			<li>
-  			<a class="f5 fw7 dib no-underline bg-animate bg-white hover-bg-light-blue dark-gray" href="https://github.com/gfto/toybox/blob/master/toys/pending/dhcp6.c">Contributed IP-Link and IP-Routing and IP-Neighbour for toybox</a>
+  			<a class="f5 fw7 dib no-underline bg-animate bg-white hover-bg-light-blue dark-gray" href="https://github.com/gfto/toybox/blob/master/toys/pending/dhcp6.c" target="_blank">Contributed IP-Link and IP-Routing and IP-Neighbour for toybox</a>
 			</li>
     </ul> 
 	</div>
@@ -106,7 +106,7 @@ func Kylo(i []js.Value) {
   <div class="center measure-wide f3 lh-copy ph2">
     <h1 class="f3 lh-title">Next Generation Key Management Solution</h1>
     <p class="f5 dark-gray fw2 tracked">
-		<a class="f5 fw7 dib no-underline bg-animate bg-white hover-bg-light-blue dark-gray" href="https://safenet.gemalto.com/data-encryption/enterprise-key-management/virtual-key-secure">This a server solution which can be integrated any application or cloud environment for facilitating key management for encryption. This is a microservice based architecture and
+		<a class="f5 fw7 dib no-underline bg-animate bg-white hover-bg-light-blue dark-gray" href="https://safenet.gemalto.com/data-encryption/enterprise-key-management/virtual-key-secure" target="_blank">This a server solution which can be integrated any application or cloud environment for facilitating key management for encryption. This is a microservice based architecture and
         it is developed mostly using Golang and C. I am working on multiple microservices, and completely responsible for designing and developeing Network Attached Encryption.</a>
     </p>
 	<h1 class="f3 lh-title">Technlogies Used</h1>

@@ -51,7 +51,7 @@ func CreateHeader() *engine.Element {
 		CreateHeading("h2","Software Devloper, Noida, India", "f6 gray fw2 ttu tracked"),
 		CreateHeading("h2","Email: rajnikant12345@live.com", "f6 gray fw2"),
 		CreateAnchor("f5 fw7 dib no-underline bg-animate bg-white hover-bg-light-blue dark-gray",
-			"https://www.linkedin.com/in/rajni-kant-94b90a18", "My LinkedIn Profile"),
+			"https://www.linkedin.com/in/rajni-kant-94b90a18", "My LinkedIn Profile").Set("target","_blank"),
 	)
 
 	e.AddChild(h1)
