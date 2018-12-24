@@ -5,6 +5,8 @@ import (
 	"syscall/js"
 )
 
+
+
 func CreateHome()*engine.Element {
 	e := engine.NewElement("div")
 	e.SetInnerHtml(`
@@ -175,7 +177,6 @@ func Cng(i []js.Value) {
 }
 
 func RegisterCallbacks() {
-	println("callback registered")
 	js.Global().Set("kylo", js.NewCallback(Kylo))
 	js.Global().Set("pdbctl", js.NewCallback(PdbCtl))
 	js.Global().Set("cng", js.NewCallback(Cng))

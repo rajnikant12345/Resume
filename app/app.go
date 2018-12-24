@@ -24,14 +24,12 @@ func CreateApp() *engine.Element{
 	Skills = CreateSkills()
 
 	e := engine.NewElement("div")
-	//e.SetClass("bg-yellow")
 	hdr := CreateHeader()
-	e.AddChild(hdr)
 
 	Body = CreateScroll()
 	Body.AddChild(Home)
-	e.AddChild(Body)
-	//e.AddChild(row)
+	e.Nest(hdr ,Body)
+
 	return e
 
 }

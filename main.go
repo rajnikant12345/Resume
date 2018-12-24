@@ -10,7 +10,7 @@ import (
 func main() {
 	c := make(chan struct{}, 1)
 
-	println("WASM Go Initialized")
+	println("WASM Go Initialized Now")
 
 	app.RegisterCallbacks()
 	engine.InitApp()

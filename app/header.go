@@ -6,9 +6,7 @@ import (
 )
 
 func CreateNav(name string) *engine.Element  {
-	a := engine.NewElement("a")
-	a.SetClass("f6 f5-l link bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l")
-	a.SetInnerHtml(name)
+	a := engine.NewElement("a").SetClass("f6 f5-l link bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l").SetInnerHtml(name)
 
 	cb := js.NewCallback(func(args []js.Value) {
 
@@ -32,26 +30,36 @@ func CreateNav(name string) *engine.Element  {
 	return a
 }
 
+func CreateImage(src , class string) *engine.Element {
+	return engine.NewElement("img").Set("src",src).SetClass(class)
+}
+
+func CreateHeading(typ , value, class string ) *engine.Element {
+	return engine.NewElement(typ).SetInnerHtml(value).SetClass(class)
+}
+
+func CreateAnchor( class, href , text string) *engine.Element {
+	return engine.NewElement("a").SetClass(class).Set("href",href).SetInnerHtml(text)
+}
+
 func CreateHeader() *engine.Element {
 
 	e := engine.NewElement("div")
-	h1 := engine.NewElement("header")
-	h1.SetClass("tc pv1")
-	h1.SetInnerHtml(`<header class="tc pv1">
-  <img src="./rajni.JPG" class="br-100 pa1 ba b--black-10 h4 w4" alt="avatar">
-  <h1 class="f5 f4-ns fw6 mid-gray">Rajni Kant</h1>
-  <h2 class="f6 gray fw2 ttu tracked">Software Devloper, Noida, India</h2>
-  <h2 class="f6 gray fw2">Email: rajnikant12345@live.com </h2>
-  <a class="f5 fw7 dib no-underline bg-animate bg-white hover-bg-light-blue dark-gray" href="https://www.linkedin.com/in/rajni-kant-94b90a18">My LinkedIn Profile</a>
-</header>`)
+	h1 := engine.NewElement("header").SetClass("tc pv0").Nest(
+		CreateImage("./rajni.JPG","br-100 pa1 ba b--black-10 h4 w4"),
+		CreateHeading("h1","Rajni Kant", "f5 f4-ns fw6 mid-gray"),
+		CreateHeading("h2","Software Devloper, Noida, India", "f6 gray fw2 ttu tracked"),
+		CreateHeading("h2","Email: rajnikant12345@live.com", "f6 gray fw2"),
+		CreateAnchor("f5 fw7 dib no-underline bg-animate bg-white hover-bg-light-blue dark-gray",
+			"https://www.linkedin.com/in/rajni-kant-94b90a18", "My LinkedIn Profile"),
+	)
+
 	e.AddChild(h1)
 
-	nav := engine.NewElement("nav")
-	nav.SetClass("bt bb tc mw7 center mt4")
-	nav.AddChild(CreateNav("Home"))
-	nav.AddChild(CreateNav("Skills"))
-	nav.AddChild(CreateNav("Organizations-Worked"))
-	//nav.AddChild(CreateNav("Contact"))
+	nav := engine.NewElement("nav").SetClass("bt bb tc mw7 center mt4").Nest(
+		CreateNav("Home"),
+		CreateNav("Skills"),
+		CreateNav("Organizations-Worked"))
 
 	e.AddChild(nav)
 	return e
